@@ -5,17 +5,21 @@ console.log(allChallengesItems);
 
 let showChallenge = (event) => {
   let clickedNavItem = event.target;
+
   let clickedNavItemId = clickedNavItem.id.substring(3);
 
   allChallengesItems.forEach((challengesItem) => {
     if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
-      challengesItem.classList.add("startersJsChallengesVisible");
-    } else challengesItem.classList.remove("startersJsChallengesVisible");
+      if (challengesItem.classList.contains("startersJsChallengesHidden")) {
+        challengesItem.classList.add("startersJsChallengesVisible");
+        challengesItem.classList.remove("startersJsChallengesHidden");
+      } else {
+        challengesItem.classList.add("startersJsChallengesHidden");
+        challengesItem.classList.remove("startersJsChallengesVisible");
+      }
+      challengesItem.classList.remove("startersJsChallengesVisible");
+    }
   });
 };
 
-navVariablesJsDataTypes.addEventListener("click", showChallenge);
-navOperatorsJs.addEventListener("click", showChallenge);
-navConditionalsJs.addEventListener("click", showChallenge);
-navLoopsJs.addEventListener("click", showChallenge);
-navFunctionsJs.addEventListener("click", showChallenge);
+navCheatSheet.addEventListener("click", showChallenge);
