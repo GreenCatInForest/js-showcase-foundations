@@ -1,0 +1,282 @@
+/* FOR MOBILE SCREENS */
+
+:root {
+  font-size: 16px;
+  --bgColor: #000;
+  --onBg: #ffffff;
+
+  --accentColor: ;
+  --trasparentAccentColor: ;
+  --darkeraccentColor: ;
+  --onAccent: ;
+
+  --sizeXs: 0.5rem;
+  --sizeSm: calc(var(--sizeXs) * 1.5);
+  --sizeMd: calc(var(--sizeSm) * 1.5);
+  --sizeLg: calc(var(--sizeMd) * 1.5);
+  --sizeXl: calc(var(--sizeLg) * 1.5);
+  --sizeXXl: calc(var(--sizeXl) * 1.5);
+}
+
+/* CSS Reset for all elements */
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+  margin: 0;
+  /*padding: calc(var(--sizeSm) / 1.5);*/
+  border: none;
+  background: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Header*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sizeMd);
+  align-items: center;
+  text-align: center;
+  gap: var(--sizeSm);
+}
+
+.topNav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+
+.topNav ul li {
+  font-size: var(--sizeMd);
+  padding: var(--sizeMd);
+}
+
+.topNavHidden li {
+  display: none;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sizeLg);
+}
+
+#challengeIntro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizeMd);
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+}
+
+/*Challenges Table Main*/
+
+.tableGridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid black;
+  max-width: fit-content;
+}
+
+.tableGridHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1%;
+  padding: var(--sizeMd);
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.tableGridBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+  padding: var(--sizeMd);
+}
+
+.tableGridButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: var(--sizeMd);
+}
+
+#tableOfChallenges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizeLg);
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+}
+
+/* JS Challenges*/
+
+/*  JS Challenges Navigation*/
+
+#cardHolderChallengesContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.challengesContainerCard {
+  padding: var(--sizeLg);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Page Basic JS Challenges */
+
+.startersJsChallenges {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: var(--sizeMd);
+  height: 70%;
+  gap: var(--sizeLg);
+}
+
+.startersJsChallenges > * {
+  padding: var(--sizeMd);
+  border: 1px solid black;
+}
+
+.navStartersJsChallenges:hover {
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+  transition: 3s ease;
+  box-shadow: -2px 30px 10px -20px rgba(0, 0, 0, 0.9);
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.startersJsChallengesHidden {
+  display: none;
+}
+
+.startersJsChallengesVisible {
+  display: block;
+}
+
+/* FOR DESKTOP SCREENS */
+
+@media screen and (min-width: 601px) {
+  :root {
+    font-size: 14px;
+    --bgColor: #000;
+    --onBg: #ffffff;
+
+    --accentColor: #7d1691;
+    --trasparentAccentColor: hsla(336, 100%, 50%, 0.2);
+    --darkeraccentColor: #3e1346;
+    --onAccent: #ffffff;
+
+    --sizeXs: 0.5rem;
+    --sizeSm: calc(var(--sizeXs) * 1.5);
+    --sizeMd: calc(var(--sizeSm) * 1.5);
+    --sizeLg: calc(var(--sizeMd) * 1.5);
+    --sizeXl: calc(var(--sizeLg) * 1.5);
+    --sizeXXl: calc(var(--sizeXl) * 1.5);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sizeXXl);
+  }
+  /* Header*/
+
+  header {
+    display: flex;
+    flex-direction: row;
+    padding: var(--sizeMd);
+    text-align: center;
+    justify-content: space-evenly;
+  }
+
+  .topNav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .topNavHidden li {
+    display: none;
+  }
+
+  /* Main */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sizeLg);
+  }
+
+  #challengeIntro {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--sizeXl));
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+  }
+  /* JS Challenges*/
+
+  /* nav */
+
+  /* Cards Basic JS Challenges*/
+
+  .cardHolderChallengesContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .challengesContainerCard {
+    max-width: 20%;
+    padding: var(--sizeLg);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .challengesContainerCard {
+    max-width: 30%;
+    padding: var(--sizeLg);
+  }
+
+  /* Page Starters Basic JS Challenges */
+
+  .startersJsChallenges {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 70%;
+    gap: var(--sizeXl);
+    align-items: center;
+  }
+
+  .startersJsChallenges > * {
+    width: 40%;
+    padding: var(--sizeLg);
+    border: 1px solid black;
+  }
+}
