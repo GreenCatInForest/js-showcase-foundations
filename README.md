@@ -37,3 +37,5 @@ Vanilla JavaScript, Bootstrap, pure HTML/CSS.
 7. Foundation: Array Challenges. Arrays and Array methods: forEach, map, filter, reduce.
 
 8. Foundation: Objects and basics of object-oriented programming.
+
+### The full project is deploying at https://java-script-various-tasks.vercel.app
