@@ -159,10 +159,9 @@ main {
     #ee609c 66%,
     #ee609c 100%
   );
-  transition: 3s ease;
+  transition: 1s ease-in-out;
   box-shadow: -2px 30px 10px -20px rgba(0, 0, 0, 0.9);
-  font-size: larger;
-  text-transform: uppercase;
+  scale: 1.01;
 }
 
 .startersJsChallengesHidden {
@@ -267,16 +266,19 @@ main {
   .startersJsChallenges {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     height: 70%;
     gap: var(--sizeXl);
-    align-items: center;
+    /* align-items: center; */
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--sizeMd);
+    width: 100%;
+    gap: var(--sizeLg);
   }
 
   .startersJsChallenges > * {
-    width: 40%;
-    padding: var(--sizeLg);
     border: 1px solid black;
   }
 }
