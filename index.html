@@ -34,7 +34,7 @@
             <span>// Variables</span><br>
             a, b <br>
             <br>
-            <span>// Literal value, doesn't being stored in a variable</span><br>
+            <span>// Literal value (or literal) doesn't being stored in a variable</span><br>
             2<br>
             <br>
             <span>// Operators</span><br>
@@ -61,37 +61,19 @@
           </div>
           <p>The statement a = b + 2; tells:  get the current value stored in the variable b, add 2 to the value, then
             store the result back into another variable we call a.</p>
-            <a href="https://www.amazon.co.uk/dp/B085XXCJ7X?binding=paperback&ref=dbs_dp_sirpi">Reference</a>
-          <li>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-          <div class="codeBlock">
-              <span>// Declaration</span><br>
-              let age;<br><br>
-              <span>// Initialization</span><br>
-              age = 25;<br>
-              <br>
-              <span>// Declaration and Initialization</span><br>
-              let name = "John";<br>
-              <br>
-              <span>// Constant Declaration and Initialization</span><br>
-              const PI = 3.14159;<br>
-            </div>
+            <a href="https://www.amazon.co.uk/dp/B085XXCJ7X?binding=paperback&ref=dbs_dp_sirpi">Reference: You Don't Know JS Yet</a>
+           </ul>
           </article>
-
-
-
-
-
         <article class="cheatSheetArticle">
         <h3>Variable Declaration and Initialization</h3>
        <ul class="challengesKeyPoints">
         <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
         <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
-        </ul>
+        <li>The declaration allows the variable to be accessed later in code without throwing a ReferenceError, while the initializer assigns a value to the variable. </li>
+        <li>In var and let declarations, the initializer is optional.</li>
+        <li>If a variable is declared without an initializer, it is assigned the value undefined.</li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+      </ul>
         <div class="codeBlock">
             <span>// Declaration</span><br>
             let age;<br><br>
@@ -108,20 +90,26 @@
          <article class="cheatSheetArticle">
           <h3>Variable Types</h3>
          <ul class="challengesKeyPoints">
-          <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
-          <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+          <li>JavaScript has different data types, such as numbers, strings, booleans, null, and undefined.</li>
+          <li>When you express values in a programs, you
+            choose different representations for those values based on what you
+            plan to do with them. These different representations for values are called types.</li>
           </ul>
           <div class="codeBlock">
-              <span>// Declaration</span><br>
-              let age;<br><br>
-              <span>// Initialization</span><br>
-              age = 25;<br>
+              <span>// Number</span><br>
+              let num = 42;<br><br>
+              <span>// String</span><br>
+              let message = "Hello, world!";<br>
               <br>
-              <span>// Declaration and Initialization</span><br>
-              let name = "John";<br>
+              <span>// Boolean</span><br>
+              let isTrue = true;<br>
               <br>
-              <span>// Constant Declaration and Initialization</span><br>
-              const PI = 3.14159;<br>
+              <span>// Null</span><br>
+              let noValue = null; <br><br>
+              <span>// Undefined</span><br>
+              let notDefined; <br><br>
+              <span>// Literals</span><br>
+              "string", 42 <br>
             </div>
           </article>
           <article class="cheatSheetArticle">
