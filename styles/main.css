@@ -147,6 +147,7 @@ main {
 .startersJsChallenges > * {
   padding: var(--sizeMd);
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .navStartersJsChallenges:hover {
