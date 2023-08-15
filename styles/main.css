@@ -170,8 +170,15 @@ main {
 .challengeSection {
   display: flex;
   flex-direction: column;
-  gap: var(--sizeLg);
   width: 100%;
+  padding: var(--sizeMd);
+}
+
+.cheatSheetArticle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--sizeLg);
   padding: var(--sizeMd);
 }
 
@@ -180,10 +187,37 @@ main {
   flex-direction: column;
   gap: var(--sizeSm);
   list-style: none;
+  padding: 0;
 }
 
 .textHighlights {
   font-weight: bolder;
+}
+
+/* Code Block Example */
+
+.codeBlock {
+  border: 1px solid black;
+  background-color: #f1eeee; /* Light gray background */
+  padding: var(--sizeMd);
+  border-radius: 4px;
+  font-family: Consolas, Monaco, monospace;
+}
+
+/* Styling for comments */
+.comment {
+  color: #888888; /* Gray color */
+  font-style: italic;
+}
+
+/* Styling for keywords */
+.keyword {
+  color: #007bff; /* Blue color */
+}
+
+/* Styling for values */
+.value {
+  color: #e83e8c; /* Pink color */
 }
 
 /* CheatSheet visibility*/
@@ -220,7 +254,7 @@ main {
   body {
     display: flex;
     flex-direction: column;
-    gap: var(--sizeXXl);
+    gap: var(--sizeXl);
   }
   /* Header*/
 
@@ -260,6 +294,26 @@ main {
     justify-content: center;
     max-width: 70%;
   }
+
+  .challengeSection {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--sizeXl));
+    align-items: center;
+    justify-content: center;
+    max-width: 70%;
+  }
+
+  /* CheatSheet visibility*/
+
+  .startersJsChallengesHidden {
+    display: none;
+  }
+
+  .startersJsChallengesVisible {
+    display: block;
+  }
+
   /* JS Challenges*/
 
   /* nav */
