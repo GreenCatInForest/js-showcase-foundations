@@ -165,6 +165,29 @@ main {
   scale: 1.01;
 }
 
+/* CheatSheet*/
+
+.challengeSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizeLg);
+  width: 100%;
+  padding: var(--sizeMd);
+}
+
+.challengesKeyPoints {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sizeSm);
+  list-style: none;
+}
+
+.textHighlights {
+  font-weight: bolder;
+}
+
+/* CheatSheet visibility*/
+
 .startersJsChallengesHidden {
   display: none;
 }
@@ -177,7 +200,7 @@ main {
 
 @media screen and (min-width: 601px) {
   :root {
-    font-size: 14px;
+    font-size: 16px;
     --bgColor: #000;
     --onBg: #ffffff;
 
