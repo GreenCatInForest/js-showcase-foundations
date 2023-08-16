@@ -1,8 +1,12 @@
-let basicJsFundamentalsTopic = document.querySelector(
+let basicJsFundamentalsTopics = document.querySelectorAll(
   ".basicJsFundamentalsNav"
 );
-console.log(basicJsFundamentalsTopic);
+console.log(basicJsFundamentalsTopics);
 
+let navCheatSheets = document.querySelectorAll(".navCheatSheet");
+console.log(navCheatSheets);
+
+// Nav Top Menu
 let allTopNavItems = document.querySelectorAll(".basicJsFundamentalsNav");
 console.log(allTopNavItems);
 let allSectionChallengesItems = document.querySelectorAll(
@@ -15,46 +19,59 @@ let allChallengesItems = document.querySelectorAll(".challengeSection");
 console.log(allChallengesItems);
 
 let showSection = (event) => {
+  let clickedTopNavItem = event.target;
+  clickedNavItemId = clickedTopNavItem.id;
+  console.log(clickedTopNavItem);
+  console.log(clickedNavItemId);
   console.log("+");
-};
-// let clickedTopNavItem = event.target;
-// let clickedNavItemId = clickedTopNavItem.id;
-// console.log(clickedNavItemId);
 
-//   allSectionChallengesItems.forEach((sectionItem) => {
-//     // console.log(challengesItem);
-//     if (clickedNavItemId.toLowerCase() === sectionItem.id.toLowerCase()) {
-//       console.log("+");
-//       // if (challengesItem.classList.contains("startersJsChallengesHidden")) {
-//       //   challengesItem.classList.add("startersJsChallengesVisible");
-//       //   challengesItem.classList.remove("startersJsChallengesHidden");
-//       // } else {
-//       //   challengesItem.classList.add("startersJsChallengesHidden");
-//       //   challengesItem.classList.remove("startersJsChallengesVisible");
-//       // }
-//       // challengesItem.classList.remove("startersJsChallengesVisible");
-//     }
-//   });
-// };
+  allSectionChallengesItems.forEach((allSectionChallengesItem) => {
+    if (allSectionChallengesItem.className.includes(clickedNavItemId)) {
+      console.log("++");
+      allSectionChallengesItem.classList.add("basicJsFundamentalsTopicVisible");
+      allSectionChallengesItem.classList.remove(
+        "basicJsFundamentalsTopicHidden"
+      );
+    } else if (!allSectionChallengesItem.className.includes(clickedNavItemId)) {
+      console.log("--");
+      allSectionChallengesItem.classList.add("basicJsFundamentalsTopicHidden");
+      allSectionChallengesItem.classList.remove(
+        "basicJsFundamentalsTopicVisible"
+      );
+    }
+    allSectionChallengesItem.classList.remove(
+      "basicJsFundamentalsTopicVisible"
+    );
+  });
+};
+
+// show cheat sheets
 
 let showCheatSheet = (event) => {
   let clickedNavItem = event.target;
   let clickedNavItemId = clickedNavItem.id.substring(3);
 
   allChallengesItems.forEach((challengesItem) => {
-    // console.log(challengesItem);
-    if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
-      if (challengesItem.classList.contains("startersJsChallengesHidden")) {
-        challengesItem.classList.add("startersJsChallengesVisible");
-        challengesItem.classList.remove("startersJsChallengesHidden");
-      } else {
-        challengesItem.classList.add("startersJsChallengesHidden");
-        challengesItem.classList.remove("startersJsChallengesVisible");
-      }
-      challengesItem.classList.remove("startersJsChallengesVisible");
-    }
+    console.log(challengesItem);
+    console.log(clickedNavItemId);
+    console.log(challengesItem.id);
+    // if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
+    //   if (challengesItem.classList.contains("startersJsChallengesHidden")) {
+    //     challengesItem.classList.add("startersJsChallengesVisible");
+    //     challengesItem.classList.remove("startersJsChallengesHidden");
+    //   } else {
+    //     challengesItem.classList.add("startersJsChallengesHidden");
+    //     challengesItem.classList.remove("startersJsChallengesVisible");
+    //   }
+    //   challengesItem.classList.remove("startersJsChallengesVisible");
+    // }
   });
 };
 
-navCheatSheet.addEventListener("click", showCheatSheet);
-basicJsFundamentalsTopic.addEventListener("click", showSection);
+navCheatSheets.forEach((navCheatSheet) =>
+  navCheatSheet.addEventListener("click", console.log("+"))
+);
+
+basicJsFundamentalsTopics.forEach((basicJsFundamentalsTopic) =>
+  basicJsFundamentalsTopic.addEventListener("click", showSection)
+);

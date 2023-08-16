@@ -26,8 +26,8 @@
       </nav>
       <section id = "basicJsFundamentalsTopic" class = "sectionChallengesItem variablesAndDataTypes basicJsFundamentalsTopicVisible">
       <nav class="startersJsChallenges">
-        <h3 class="navStartersJsChallenges" id="navCheatSheet">Cheat Sheet</h3>
-        <h3 class="navStartersJsChallenges" id="addChallenge">+ Add your challenge</h3>
+        <h3 class="navStartersJsChallenges" class="navCheatSheet">Cheat Sheet</h3>
+        <h3 class="navStartersJsChallenges" class="addChallenge">+ Add your challenge</h3>
       </nav>
 
       <section class ="startersJsChallengesHidden challengeSection" id="cheatSheet">
@@ -233,7 +233,427 @@
       <article></article>
      </section>  
     <section class="navListChallengesContainer"></section>
-  </section>
+      </section>
+      <section id = "operatorsJsFundamentalsTopic" class = "sectionChallengesItem operators basicJsFundamentalsTopicHidden">
+        <nav class="startersJsChallenges">
+          <h3 class="navStartersJsChallenges" id="navCheatSheet">Cheat Sheet</h3>
+          <h3 class="navStartersJsChallenges" id="addChallenge">+ Add your challenge</h3>
+        </nav>
+  
+        <section class ="startersJsChallengesHidden challengeSection" id="cheatSheet">
+  
+          <article class="cheatSheetArticle">
+            <h3>Statements and Expressions</h3>
+           <ul class="challengesKeyPoints">
+            <li>Statement is a group of words, numbers, and operators that performs a specific task.</li>
+            <li>Statements are made up of one or more expressions.  </li>
+            <li>An expression is any reference to a variable or value, or a set of variable(s) and
+              value(s) combined with operators. </li>
+            <div class="codeBlock">
+              <span>// Statement:</span><br><br>
+              a = b + 2 <br><br>
+              <span>// Variables</span><br>
+              a, b <br>
+              <br>
+              <span>// Literal value (or literal) doesn't being stored in a variable</span><br>
+              2<br>
+              <br>
+              <span>// Operators</span><br>
+              * and = <br>
+            </div>
+            <div class="codeBlock">
+              <span>// Expressions in a statement a = b + 2:</span><br>
+              <br>
+              <span>// Literal value expression</span><br>
+              2 <br><br>
+              <span>// Variable expression, retrieve its currentvalue</span><br>
+              b <br>
+              <br>
+              <span>// Arithmetic expression</span><br>
+              b + 2 <br>
+              <br>
+              <span>// Assignment expression, which means to assign
+                the result of the b * 2 expression to the variable a</span><br>
+              a = b + 2 <br><br>
+              <span>// General expression - an expression without assigning a value. Calculate but doesn't do anything</span><br>
+              b + 2 <br><br>
+              <span>// Call expression statement</span><br>
+              alert(a) <br>
+            </div>
+            <p>The statement a = b + 2; tells:  get the current value stored in the variable b, add 2 to the value, then
+              store the result back into another variable we call a.</p>
+              <a href="https://www.amazon.co.uk/dp/B085XXCJ7X?binding=paperback&ref=dbs_dp_sirpi">Reference: You Don't Know JS Yet</a>
+             <li>Global variables are in fact properties of the global object</li>
+             <li>In web pages, the global object is window, so you can set and access global variables using the window.variable syntax. 
+              In all environments, you can use the globalThis variable (which itself is a global variable) to access global variables.</li>
+            <li>We can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+            </ul>
+            </article>
+          <article class="cheatSheetArticle">
+          <h3>Variable Declaration and Initialization</h3>
+         <ul class="challengesKeyPoints">
+          <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
+          <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+          <li>The declaration allows the variable to be accessed later in code without throwing a ReferenceError, while the initializer assigns a value to the variable. </li>
+          <li>In var and let declarations, the initializer is optional.</li>
+          <li>If a const variable is declared without an initializer, it is assigned the value undefined.</li>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+        </ul>
+          <div class="codeBlock">
+              <span>// Declaration</span><br>
+              let age;<br><br>
+              <span>// Initialization</span><br>
+              age = 25;<br>
+              <br>
+              <span>// Declaration and Initialization</span><br>
+              <span>// "let name" is a declaration </span><br>
+              <span>// "= "John"" is initialiser </span><br>
+              let name = "John";<br>
+              <br>
+              <span>// Constant Declaration and Initialization</span><br>
+              const PI = 3.14159;<br>
+            </div>
+          </article>
+           <article class="cheatSheetArticle">
+            <h3>Variable Types</h3>
+           <ul class="challengesKeyPoints">
+            <li>JavaScript has different data types, such as numbers, strings, booleans, null, and undefined.</li>
+            <li>When you express values in a programs, you
+              choose different representations for those values based on what you
+              plan to do with them. These different representations for values are called types.</li>
+            <div class="codeBlock">
+                <span>// Number</span><br>
+                let num = 42;<br><br>
+                <span>// String</span><br>
+                let message = "Hello, world!";<br>
+                <br>
+                <span>// Boolean</span><br>
+                let isTrue = true;<br>
+                <br>
+                <span>// Null</span><br>
+                let noValue = null; <br><br>
+                <span>// Undefined</span><br>
+                let notDefined; <br><br>
+                <span>// Literals</span><br>
+                "string", 42 <br>
+              </div>
+            <h4>ECMAScript 2024</h4>
+            <li>ECMA has 8 ECMAScript language types: Undefined, Null, Boolean, String, Symbol, Number, BigInt, and Object. An ECMAScript language value is a value that is characterized by an ECMAScript language type.</li>
+           </ul>
+           <a href="https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html">Reference: ECMAScript</a>
+            </article>
+  
+            <article class="cheatSheetArticle">
+              <h3>Variable scope</h3>
+             <ul class="challengesKeyPoints">
+              <li>A variable may belong to 3 scopes:
+                <ul>
+                  <li><span class = "textHighlights">Global scope</span> the default scope for all code running in script mode.</li>
+                  <li><span class = "textHighlights">Module scope</span> the scope for code running in module mode.</li>
+                  <li><span class = "textHighlights">Function scope</span> the scope created with a function.</li>
+                </ul>
+              <li>In addition, variables declared with let or const can belong to an <span class = "textHighlights">additional scope: block scope</span> The scope created with a pair of curly braces (a block).</li>
+              </li>
+              <li>When you declare a variable outside of any function, it is called a <span class = "textHighlights">global variable</span>, because it is available to any other code in the current document.</li> 
+              <li>When you declare a variable within a function, it is called a <span class = "textHighlights">local variable</span>, because it is available only within that function.</li>
+              <li>var-declared variables are hoisted, meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet.</li>
+              <li>Whether let and const are hoisted is a matter of definition debate. Referencing the variable in the block before the variable declaration always results in a ReferenceError, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              </ul>
+              <div class="codeBlock">
+                  <span>// Declaration</span><br>
+                  let age;<br><br>
+                  <span>// Initialization</span><br>
+                  age = 25;<br>
+                  <br>
+                  <span>// Declaration and Initialization</span><br>
+                  let name = "John";<br>
+                  <br>
+                  <span>// Constant Declaration and Initialization</span><br>
+                  const PI = 3.14159;<br>
+                </div>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+              </article>
+  
+  
+              <article class="cheatSheetArticle">
+                <h3>Variable Declaration and Initialization</h3>
+               <ul class="challengesKeyPoints">
+                <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
+                <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+                </ul>
+                <div class="codeBlock">
+                    <span>// Declaration</span><br>
+                    let age;<br><br>
+                    <span>// Initialization</span><br>
+                    age = 25;<br>
+                    <br>
+                    <span>// Declaration and Initialization</span><br>
+                    let name = "John";<br>
+                    <br>
+                    <span>// Constant Declaration and Initialization</span><br>
+                    const PI = 3.14159;<br>
+                  </div>
+                </article>
+                <article class="cheatSheetArticle">
+                  <h3>Variable Declaration and Initialization</h3>
+                 <ul class="challengesKeyPoints">
+                  <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
+                  <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+                  </ul>
+                  <div class="codeBlock">
+                      <span>// Declaration</span><br>
+                      let age;<br><br>
+                      <span>// Initialization</span><br>
+                      age = 25;<br>
+                      <br>
+                      <span>// Declaration and Initialization</span><br>
+                      let name = "John";<br>
+                      <br>
+                      <span>// Constant Declaration and Initialization</span><br>
+                      const PI = 3.14159;<br>
+                    </div>
+                  </article>
+        </section>
+       <section>
+        <h3>List of Variables & Data Types Challenges</h3>
+        <ul>
+          <!-- <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li> -->
+        </ul>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+       </section>  
+      <section class="navListChallengesContainer"></section>
+        </section>
+      <section id = "operatorsJsFundamentalsTopic" class = "sectionChallengesItem operators basicJsFundamentalsTopicHidden">
+          <nav class="startersJsChallenges">
+            <h3 class="navStartersJsChallenges" id="navCheatSheet">Cheat Sheet</h3>
+            <h3 class="navStartersJsChallenges" id="addChallenge">+ Add your challenge</h3>
+          </nav>
+    
+          <section class ="startersJsChallengesHidden challengeSection" id="cheatSheet">
+    
+            <article class="cheatSheetArticle">
+              <h3>Statements and Expressions</h3>
+             <ul class="challengesKeyPoints">
+              <li>Statement is a group of words, numbers, and operators that performs a specific task.</li>
+              <li>Statements are made up of one or more expressions.  </li>
+              <li>An expression is any reference to a variable or value, or a set of variable(s) and
+                value(s) combined with operators. </li>
+              <div class="codeBlock">
+                <span>// Statement:</span><br><br>
+                a = b + 2 <br><br>
+                <span>// Variables</span><br>
+                a, b <br>
+                <br>
+                <span>// Literal value (or literal) doesn't being stored in a variable</span><br>
+                2<br>
+                <br>
+                <span>// Operators</span><br>
+                * and = <br>
+              </div>
+              <div class="codeBlock">
+                <span>// Expressions in a statement a = b + 2:</span><br>
+                <br>
+                <span>// Literal value expression</span><br>
+                2 <br><br>
+                <span>// Variable expression, retrieve its currentvalue</span><br>
+                b <br>
+                <br>
+                <span>// Arithmetic expression</span><br>
+                b + 2 <br>
+                <br>
+                <span>// Assignment expression, which means to assign
+                  the result of the b * 2 expression to the variable a</span><br>
+                a = b + 2 <br><br>
+                <span>// General expression - an expression without assigning a value. Calculate but doesn't do anything</span><br>
+                b + 2 <br><br>
+                <span>// Call expression statement</span><br>
+                alert(a) <br>
+              </div>
+              <p>The statement a = b + 2; tells:  get the current value stored in the variable b, add 2 to the value, then
+                store the result back into another variable we call a.</p>
+                <a href="https://www.amazon.co.uk/dp/B085XXCJ7X?binding=paperback&ref=dbs_dp_sirpi">Reference: You Don't Know JS Yet</a>
+               <li>Global variables are in fact properties of the global object</li>
+               <li>In web pages, the global object is window, so you can set and access global variables using the window.variable syntax. 
+                In all environments, you can use the globalThis variable (which itself is a global variable) to access global variables.</li>
+              <li>We can access global variables declared in one window or frame from another window or frame by specifying the window or frame name. For example, if a variable called phoneNumber is declared in a document, you can refer to this variable from an iframe as parent.phoneNumber.</li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+              </ul>
+              </article>
+            <article class="cheatSheetArticle">
+            <h3>Variable Declaration and Initialization</h3>
+           <ul class="challengesKeyPoints">
+            <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
+            <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+            <li>The declaration allows the variable to be accessed later in code without throwing a ReferenceError, while the initializer assigns a value to the variable. </li>
+            <li>In var and let declarations, the initializer is optional.</li>
+            <li>If a const variable is declared without an initializer, it is assigned the value undefined.</li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+          </ul>
+            <div class="codeBlock">
+                <span>// Declaration</span><br>
+                let age;<br><br>
+                <span>// Initialization</span><br>
+                age = 25;<br>
+                <br>
+                <span>// Declaration and Initialization</span><br>
+                <span>// "let name" is a declaration </span><br>
+                <span>// "= "John"" is initialiser </span><br>
+                let name = "John";<br>
+                <br>
+                <span>// Constant Declaration and Initialization</span><br>
+                const PI = 3.14159;<br>
+              </div>
+            </article>
+             <article class="cheatSheetArticle">
+              <h3>Variable Types</h3>
+             <ul class="challengesKeyPoints">
+              <li>JavaScript has different data types, such as numbers, strings, booleans, null, and undefined.</li>
+              <li>When you express values in a programs, you
+                choose different representations for those values based on what you
+                plan to do with them. These different representations for values are called types.</li>
+              <div class="codeBlock">
+                  <span>// Number</span><br>
+                  let num = 42;<br><br>
+                  <span>// String</span><br>
+                  let message = "Hello, world!";<br>
+                  <br>
+                  <span>// Boolean</span><br>
+                  let isTrue = true;<br>
+                  <br>
+                  <span>// Null</span><br>
+                  let noValue = null; <br><br>
+                  <span>// Undefined</span><br>
+                  let notDefined; <br><br>
+                  <span>// Literals</span><br>
+                  "string", 42 <br>
+                </div>
+              <h4>ECMAScript 2024</h4>
+              <li>ECMA has 8 ECMAScript language types: Undefined, Null, Boolean, String, Symbol, Number, BigInt, and Object. An ECMAScript language value is a value that is characterized by an ECMAScript language type.</li>
+             </ul>
+             <a href="https://tc39.es/ecma262/multipage/ecmascript-data-types-and-values.html">Reference: ECMAScript</a>
+              </article>
+    
+              <article class="cheatSheetArticle">
+                <h3>Variable scope</h3>
+               <ul class="challengesKeyPoints">
+                <li>A variable may belong to 3 scopes:
+                  <ul>
+                    <li><span class = "textHighlights">Global scope</span> the default scope for all code running in script mode.</li>
+                    <li><span class = "textHighlights">Module scope</span> the scope for code running in module mode.</li>
+                    <li><span class = "textHighlights">Function scope</span> the scope created with a function.</li>
+                  </ul>
+                <li>In addition, variables declared with let or const can belong to an <span class = "textHighlights">additional scope: block scope</span> The scope created with a pair of curly braces (a block).</li>
+                </li>
+                <li>When you declare a variable outside of any function, it is called a <span class = "textHighlights">global variable</span>, because it is available to any other code in the current document.</li> 
+                <li>When you declare a variable within a function, it is called a <span class = "textHighlights">local variable</span>, because it is available only within that function.</li>
+                <li>var-declared variables are hoisted, meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet.</li>
+                <li>Whether let and const are hoisted is a matter of definition debate. Referencing the variable in the block before the variable declaration always results in a ReferenceError, because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+                <div class="codeBlock">
+                    <span>// Declaration</span><br>
+                    let age;<br><br>
+                    <span>// Initialization</span><br>
+                    age = 25;<br>
+                    <br>
+                    <span>// Declaration and Initialization</span><br>
+                    let name = "John";<br>
+                    <br>
+                    <span>// Constant Declaration and Initialization</span><br>
+                    const PI = 3.14159;<br>
+                  </div>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types">Reference MDN</a>
+                </article>
+    
+    
+                <article class="cheatSheetArticle">
+                  <h3>Variable Declaration and Initialization</h3>
+                 <ul class="challengesKeyPoints">
+                  <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
+                  <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+                  </ul>
+                  <div class="codeBlock">
+                      <span>// Declaration</span><br>
+                      let age;<br><br>
+                      <span>// Initialization</span><br>
+                      age = 25;<br>
+                      <br>
+                      <span>// Declaration and Initialization</span><br>
+                      let name = "John";<br>
+                      <br>
+                      <span>// Constant Declaration and Initialization</span><br>
+                      const PI = 3.14159;<br>
+                    </div>
+                  </article>
+                  <article class="cheatSheetArticle">
+                    <h3>Variable Declaration and Initialization</h3>
+                   <ul class="challengesKeyPoints">
+                    <li><span class = "textHighlights">Declaration</span> establishes the existence of a variable in a certain scope.</li>
+                    <li><span class = "textHighlights">Initialization</span> assigns a value to the variable at the time of declaration.</li>
+                    </ul>
+                    <div class="codeBlock">
+                        <span>// Declaration</span><br>
+                        let age;<br><br>
+                        <span>// Initialization</span><br>
+                        age = 25;<br>
+                        <br>
+                        <span>// Declaration and Initialization</span><br>
+                        let name = "John";<br>
+                        <br>
+                        <span>// Constant Declaration and Initialization</span><br>
+                        const PI = 3.14159;<br>
+                      </div>
+                    </article>
+          </section>
+         <section>
+          <h3>List of Variables & Data Types Challenges</h3>
+          <ul>
+            <!-- <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li> -->
+          </ul>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+          <article></article>
+         </section>  
+        <section class="navListChallengesContainer"></section>
+          </section>
     </main>
  
     <footer></footer>
