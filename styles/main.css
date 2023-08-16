@@ -76,6 +76,21 @@ main {
   max-width: 70%;
 }
 
+.basicJsFundamentalsNav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  gap: var(--sizeLg);
+}
+
+.basicTopic {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
 /*Challenges Table Main*/
 
 .tableGridContainer {

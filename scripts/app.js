@@ -5,10 +5,10 @@ console.log(allChallengesItems);
 
 let showChallenge = (event) => {
   let clickedNavItem = event.target;
-
   let clickedNavItemId = clickedNavItem.id.substring(3);
 
   allChallengesItems.forEach((challengesItem) => {
+    console.log(challengesItem);
     if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
       if (challengesItem.classList.contains("startersJsChallengesHidden")) {
         challengesItem.classList.add("startersJsChallengesVisible");
