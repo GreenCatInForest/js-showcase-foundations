@@ -76,7 +76,7 @@ main {
   max-width: 70%;
 }
 
-.basicJsFundamentalsNav ul {
+#topFundamentalsNav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
