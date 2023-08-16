@@ -21,9 +21,16 @@ fetchData()
 
     basicChallengesTitleList.forEach((basicChallengesTitleItem) => {
       let buttonTitleItem = document.createElement("button");
+
       buttonTitleItem.classList.add("navListChallengesButton");
+
+      buttonTitleItem.textContent = `// ${basicChallengesTitleItem.challengeTitle}`;
+      challengeLink = basicChallengesTitleItem.challengeLink;
+      goToChallenge = () => {
+        console.log(basicChallengesTitleItem.challengeLink);
+      };
+      buttonTitleItem.addEventListener("click", goToChallenge);
       navListChallengesContainer.appendChild(buttonTitleItem);
-      buttonTitleItem.textContent = `// + ${basicChallengesTitleItem.challengeTitle}`;
     });
   })
   .catch((error) => {

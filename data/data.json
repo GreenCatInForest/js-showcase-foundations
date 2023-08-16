@@ -23,14 +23,16 @@
               "challengeTitle": "Create variables and assign a values. Concatenate a string with a number",
               "challengeDescription": "Declare multiple variables without assigning values. Assign different types of values (string, number, boolean) to variables and print them. Concatenate a string with multiple numbers using template literals. Create a function that concatenates any data type with a string.",
               "level": "basic",
-              "challengeContent": ""
+              "challengeContent": "",
+              "challengeLink": "https://js-showcase-foundations.vercel.app/a"
             },
             {
               "challengeType": "",
               "challengeTitle": "",
               "challengeDescription": "",
               "level": "",
-              "challengeContent": ""
+              "challengeContent": "",
+              "challengeLink": "https://js-showcase-foundations.vercel.app/b"
             },
             {
               "challengeType": "Basic challenges",
