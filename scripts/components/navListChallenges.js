@@ -25,9 +25,10 @@ fetchData()
       buttonTitleItem.classList.add("navListChallengesButton");
 
       buttonTitleItem.textContent = `// ${basicChallengesTitleItem.challengeTitle}`;
-      challengeLink = basicChallengesTitleItem.challengeLink;
+
       goToChallenge = () => {
-        console.log(basicChallengesTitleItem.challengeLink);
+        challengeLink = basicChallengesTitleItem.challengeLink;
+        window.open(challengeLink);
       };
       buttonTitleItem.addEventListener("click", goToChallenge);
       navListChallengesContainer.appendChild(buttonTitleItem);
