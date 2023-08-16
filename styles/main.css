@@ -84,11 +84,19 @@ main {
   gap: var(--sizeLg);
 }
 
-.basicTopic {
-  display: flex;
+#basicJsFundamentalsTopic {
   flex-direction: column;
   width: 100%;
   align-items: center;
+  gap: var(--sizeMd);
+}
+
+.basicJsFundamentalsTopicHidden {
+  display: none;
+}
+
+.basicJsFundamentalsTopicVisible {
+  display: flex;
 }
 
 /*Challenges Table Main*/
