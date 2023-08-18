@@ -65,9 +65,7 @@ let showCheatSheet = (event) => {
       ) {
         allCheatSheetsItem.classList.add("startersJsCheatSheetsVisible");
         allCheatSheetsItem.classList.remove("startersJsCheatSheetsHidden");
-      } else if (
-        allCheatSheetsItem.classList.contains("startersJsCheatSheetsVisible")
-      ) {
+      } else {
         console.log("3+");
         allCheatSheetsItem.classList.add("startersJsCheatSheetsHidden");
         allCheatSheetsItem.classList.remove("startersJsCheatSheetsVisible");
@@ -78,21 +76,21 @@ let showCheatSheet = (event) => {
   });
 };
 
-allChallengesItems.forEach((challengesItem) => {
-  console.log(challengesItem);
-  console.log(clickedNavItemId);
-  console.log(challengesItem.id);
-  if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
-    if (challengesItem.classList.contains("startersJsChallengesHidden")) {
-      challengesItem.classList.add("startersJsChallengesVisible");
-      challengesItem.classList.remove("startersJsChallengesHidden");
-    } else {
-      challengesItem.classList.add("startersJsChallengesHidden");
-      challengesItem.classList.remove("startersJsChallengesVisible");
-    }
-    challengesItem.classList.remove("startersJsChallengesVisible");
-  }
-});
+// allChallengesItems.forEach((challengesItem) => {
+//   console.log(challengesItem);
+//   console.log(clickedNavItemId);
+//   console.log(challengesItem.id);
+//   if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
+//     if (challengesItem.classList.contains("startersJsChallengesHidden")) {
+//       challengesItem.classList.add("startersJsChallengesVisible");
+//       challengesItem.classList.remove("startersJsChallengesHidden");
+//     } else {
+//       challengesItem.classList.add("startersJsChallengesHidden");
+//       challengesItem.classList.remove("startersJsChallengesVisible");
+//     }
+//     challengesItem.classList.remove("startersJsChallengesVisible");
+//   }
+// });
 
 allNavCheatSheets.forEach((navCheatSheet) =>
   navCheatSheet.addEventListener("click", showCheatSheet)
