@@ -245,12 +245,12 @@ main {
 
 /* CheatSheet visibility*/
 
-.startersJsChallengesHidden {
+.startersJsCheatSheetsHidden {
   display: none;
 }
 
-.startersJsChallengesVisible {
-  display: block;
+.startersJsCheatSheetsVisible {
+  display: flex;
 }
 
 /* FOR DESKTOP SCREENS */

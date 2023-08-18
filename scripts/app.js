@@ -3,8 +3,11 @@ let basicJsFundamentalsTopics = document.querySelectorAll(
 );
 console.log(basicJsFundamentalsTopics);
 
-let navCheatSheets = document.querySelectorAll(".navCheatSheet");
-console.log(navCheatSheets);
+let allNavCheatSheets = document.querySelectorAll(".navCheatSheet");
+console.log(allNavCheatSheets);
+
+let allCheatSheetsItems = document.querySelectorAll(".cheatSheet");
+console.log(allCheatSheetsItems);
 
 // Nav Top Menu
 let allTopNavItems = document.querySelectorAll(".basicJsFundamentalsNav");
@@ -45,28 +48,54 @@ let showSection = (event) => {
 // show cheat sheets
 
 let showCheatSheet = (event) => {
-  let clickedNavItem = event.target;
-  //   let clickedNavItemId = clickedNavItem.id.substring(3);
+  let clickedNavCheatSheetItem = event.target;
+  let clickedNavCheatSheetItemId = clickedNavCheatSheetItem.id.substring(3);
 
-  //   allChallengesItems.forEach((challengesItem) => {
-  //     console.log(challengesItem);
-  //     console.log(clickedNavItemId);
-  //     console.log(challengesItem.id);
-  // if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
-  //   if (challengesItem.classList.contains("startersJsChallengesHidden")) {
-  //     challengesItem.classList.add("startersJsChallengesVisible");
-  //     challengesItem.classList.remove("startersJsChallengesHidden");
-  //   } else {
-  //     challengesItem.classList.add("startersJsChallengesHidden");
-  //     challengesItem.classList.remove("startersJsChallengesVisible");
-  //   }
-  //   challengesItem.classList.remove("startersJsChallengesVisible");
-  // }
-  //   });
+  allCheatSheetsItems.forEach((allCheatSheetsItem) => {
+    console.log(clickedNavCheatSheetItem);
+    console.log(clickedNavCheatSheetItem.id);
+    console.log(allCheatSheetsItem.id);
+    if (
+      clickedNavCheatSheetItemId
+        .toLowerCase()
+        .includes(clickedNavCheatSheetItemId.toLowerCase())
+    ) {
+      if (
+        allCheatSheetsItem.classList.contains("startersJsCheatSheetsHidden")
+      ) {
+        allCheatSheetsItem.classList.add("startersJsCheatSheetsVisible");
+        allCheatSheetsItem.classList.remove("startersJsCheatSheetsHidden");
+      } else if (
+        allCheatSheetsItem.classList.contains("startersJsCheatSheetsVisible")
+      ) {
+        console.log("3+");
+        allCheatSheetsItem.classList.add("startersJsCheatSheetsHidden");
+        allCheatSheetsItem.classList.remove("startersJsCheatSheetsVisible");
+      }
+
+      allCheatSheetsItem.classList.remove("startersJsCheatSheetsVisible");
+    }
+  });
 };
 
-navCheatSheets.forEach((navCheatSheet) =>
-  navCheatSheet.addEventListener("click", console.log("+"))
+allChallengesItems.forEach((challengesItem) => {
+  console.log(challengesItem);
+  console.log(clickedNavItemId);
+  console.log(challengesItem.id);
+  if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
+    if (challengesItem.classList.contains("startersJsChallengesHidden")) {
+      challengesItem.classList.add("startersJsChallengesVisible");
+      challengesItem.classList.remove("startersJsChallengesHidden");
+    } else {
+      challengesItem.classList.add("startersJsChallengesHidden");
+      challengesItem.classList.remove("startersJsChallengesVisible");
+    }
+    challengesItem.classList.remove("startersJsChallengesVisible");
+  }
+});
+
+allNavCheatSheets.forEach((navCheatSheet) =>
+  navCheatSheet.addEventListener("click", showCheatSheet)
 );
 
 basicJsFundamentalsTopics.forEach((basicJsFundamentalsTopic) =>
