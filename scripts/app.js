@@ -32,25 +32,6 @@ let showSection = (event) => {
       allSectionChallengesItem.classList.remove(
         "basicJsFundamentalsTopicHidden"
       );
-
-      // if (
-      //   allSectionChallengesItem.classList.contains(
-      //     "basicJsFundamentalsTopicHidden"
-      //   )
-      // ) {
-      //   console.log("++");
-      //   allSectionChallengesItem.classList.add(
-      //     "basicJsFundamentalsTopicVisible"
-      //   );
-      //   allSectionChallengesItem.classList.remove(
-      //     "basicJsFundamentalsTopicHidden"
-      //   );
-      // } else {
-      //   allSectionChallengesItem.classList.add("startersJsChallengesHidden");
-      //   allSectionChallengesItem.classList.remove(
-      //     "basicJsFundamentalsTopicVisible"
-      //   );
-      // }
     } else if (!allSectionChallengesItem.className.includes(clickedNavItemId)) {
       console.log("--");
       allSectionChallengesItem.classList.add("basicJsFundamentalsTopicHidden");
