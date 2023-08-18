@@ -70,27 +70,10 @@ let showCheatSheet = (event) => {
         allCheatSheetsItem.classList.add("startersJsCheatSheetsHidden");
         allCheatSheetsItem.classList.remove("startersJsCheatSheetsVisible");
       }
-
-      allCheatSheetsItem.classList.remove("startersJsCheatSheetsVisible");
+      // allCheatSheetsItem.classList.remove("startersJsCheatSheetsVisible");
     }
   });
 };
-
-// allChallengesItems.forEach((challengesItem) => {
-//   console.log(challengesItem);
-//   console.log(clickedNavItemId);
-//   console.log(challengesItem.id);
-//   if (clickedNavItemId.toLowerCase() === challengesItem.id.toLowerCase()) {
-//     if (challengesItem.classList.contains("startersJsChallengesHidden")) {
-//       challengesItem.classList.add("startersJsChallengesVisible");
-//       challengesItem.classList.remove("startersJsChallengesHidden");
-//     } else {
-//       challengesItem.classList.add("startersJsChallengesHidden");
-//       challengesItem.classList.remove("startersJsChallengesVisible");
-//     }
-//     challengesItem.classList.remove("startersJsChallengesVisible");
-//   }
-// });
 
 allNavCheatSheets.forEach((navCheatSheet) =>
   navCheatSheet.addEventListener("click", showCheatSheet)
