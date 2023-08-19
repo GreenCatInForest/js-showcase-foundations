@@ -657,12 +657,14 @@
       </section>
       <section id = "domJsFundamentalsTopic" class = "sectionChallengesItem dom basicJsFundamentalsTopicHidden">
             <nav class="startersJsChallenges">
-              <h3 class="navStartersJsChallenges navCheatSheet" id="domCheatSheet">Cheat Sheet</h3>
+              <h3 class="navStartersJsChallenges navCheatSheet" id="navDomCheatSheet">Cheat Sheet</h3>
               <h3 class="navStartersJsChallenges" id="addChallenge">+ Add your challenge</h3>
             </nav>
-      
-                  When you click on an element in a web page, a <span>series of events</span> are triggered in a sequence known as <span class="">event propagation</span>. </li>
-                <li>There are two main phases of event propagation:</li>
+            <section class ="startersJsCheatSheetsHidden cheatSheet" id="domCheatSheet">
+              <article class="cheatSheetArticle">
+              <h3>Event Propagation</h3>
+              <li>When you click on an element in a web page, a <span>series of events</span> are triggered in a sequence known as <span class="">event propagation</span>.</li>
+              <li>There are two main phases of event propagation:</li>
               <li>Capturing Phase: The event starts at the root of the DOM (usually the window object) and travels down the hierarchy of elements to the target element. This phase is called the capturing phase and is less commonly used.</li>
               <li>Bubbling Phase: After the event reaches the target element, it starts bubbling up the hierarchy of elements, from the target element up to the root. This phase is called the bubbling phase and is more commonly used.</li>
               <li>When you click on a button, for example, the following steps occur:

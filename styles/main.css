@@ -84,19 +84,16 @@ main {
   gap: var(--sizeLg);
 }
 
-#basicJsFundamentalsTopic {
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  gap: var(--sizeMd);
-}
-
 .basicJsFundamentalsTopicHidden {
   display: none;
 }
 
 .basicJsFundamentalsTopicVisible {
   display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  gap: var(--sizeMd);
 }
 
 /*Challenges Table Main*/
@@ -250,7 +247,10 @@ main {
 }
 
 .startersJsCheatSheetsVisible {
-  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: var(--sizeMd);
 }
 
 /* FOR DESKTOP SCREENS */
