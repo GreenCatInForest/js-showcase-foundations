@@ -690,6 +690,10 @@
               <article class="cheatSheetArticle">
               <h3>Event Propagation</h3>
               <li>When you click on an element in a web page, a <span>series of events</span> are triggered in a sequence known as <span class="">event propagation</span>.</li>
+              <li>Event propagation is a way to describe the “stack” of events that are fired in a web browser. In our table example above, clicking on the a tag is the first event that we will fire, but there are other events too.
+                To understand that concept, you must understand that the elements on a web browser are nested. They do not cover each other up. So a click on the a tag also clicks on the row, the table, the div in which the table is nested, and anything else all the way out to document , the complete container that holds everything in your browser.
+                The movement of events “up” from the most-nested element ( a) out to the least-nested ( document) is referred to as “bubbling.” If events start in the “outer-most” element and moved “down,” that is referred to as “trickling.”
+              <a href="https://www.freecodecamp.org/news/a-simplified-explanation-of-event-propagation-in-javascript-f9de7961a06e/">Reference</a></li>
               <li>There are two main phases of event propagation:</li>
               <li>Capturing Phase: The event starts at the root of the DOM (usually the window object) and travels down the hierarchy of elements to the target element. This phase is called the capturing phase and is less commonly used.</li>
               <li>Bubbling Phase: After the event reaches the target element, it starts bubbling up the hierarchy of elements, from the target element up to the root. This phase is called the bubbling phase and is more commonly used.</li>
