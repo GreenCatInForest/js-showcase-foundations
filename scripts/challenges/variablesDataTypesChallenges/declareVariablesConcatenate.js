@@ -1,11 +1,18 @@
+let firstValue = document.querySelector("#dataTypeFirst").value;
+let secondValue = document.querySelector("#dataTypeSecond").value;
+
 addEventListener("submit", (event) => {
   event.preventDefault();
 
-  let firstValue = document.querySelector("#dataTypeFirst").value;
-  let secondValue = document.querySelector("#dataTypeSecond").value;
+  let inputValues = document.querySelectorAll(".inputValues");
 
-  console.log(typeof firstValue);
-  console.log(typeof secondValue);
+  inputValues.forEach((inputValue) => {
+    let cleanInputValue = inputValue.value
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "");
+    console.log(cleanInputValue);
 
-  console.log(firstValue + secondValue);
+    console.log(typeof inputValue.value);
+  });
 });
