@@ -27,6 +27,17 @@ defineValues = (inputValueData, inputValueId) => {
     definedValue = undefined;
   } else if (!isNaN(Number(cleanInputValueData))) {
     definedValue = Number(cleanInputValueData);
+    console.log(typeof definedValue);
+  } else if (
+    cleanInputValueData === "true" ||
+    cleanInputValueData === "false"
+  ) {
+    definedValue = Boolean(cleanInputValueData);
+    console.log(typeof definedValue);
+  } else if (cleanInputValueData.constructor.name === "String") {
+    definedValue = cleanInputValueData;
+    console.log(cleanInputValueData);
+    console.log(cleanInputValueData.constructor.name);
   }
 
   if (inputValueId === "dataTypeFirst") {
@@ -39,9 +50,11 @@ defineValues = (inputValueData, inputValueId) => {
   }
 
   if (typeof num1 !== "undefined" && typeof num2 !== "undefined") {
-    let sum = num1 + num2;
+    let sum = num1 + " " + num2;
     console.log(sum);
-  }
+  } else if (typeof num1 !== "undefined" || typeof num2 !== "undefined") {
+    alert("if you concantenate anything with undefined, result will be NaN");
+  } else;
 };
 //     if (inputValue) {
 //       if (inputValue === "null") {
