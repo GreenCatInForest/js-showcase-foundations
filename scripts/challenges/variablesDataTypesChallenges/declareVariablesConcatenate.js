@@ -9,6 +9,29 @@ addEventListener("submit", (event) => {
   let cleanSecondValue = secondValue.toLowerCase().trim().replace(/\s+/g, "");
   console.log(cleanSecondValue);
 
+  if (cleanInputValue) {
+    if (cleanInputValue === "null") {
+      cleanInputValue = null;
+      definedValues.push(cleanInputValue);
+      console.log(typeof cleanInputValue);
+    } else if (cleanInputValue === "undefined") {
+      cleanInputValue = undefined;
+      definedValues.push(cleanInputValue);
+      console.log(typeof cleanInputValue);
+    } else if (
+      cleanInputValue.includes("[]") ||
+      cleanInputValue.includes("]") ||
+      cleanInputValue.includes("[")
+    ) {
+      cleanInputValue = [cleanInputValue];
+      console.log(typeof cleanInputValue);
+      console.log(Array.isArray(cleanInputValue));
+      definedValues.push(cleanInputValue);
+    }
+  } else {
+  }
+  console.log(definedValues);
+
   console.log(cleanFirstValue + cleanSecondValue);
 });
 
