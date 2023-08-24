@@ -13,6 +13,8 @@ addEventListener("submit", (event) => {
       .replace(/\s+/g, "");
     console.log(cleanInputValue);
 
-    console.log(typeof inputValue.value);
+    if (cleanInputValue) {
+      console.log("exist");
+    } else console.log("not");
   });
 });
