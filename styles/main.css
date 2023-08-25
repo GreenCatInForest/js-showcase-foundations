@@ -253,6 +253,18 @@ main {
   gap: var(--sizeMd);
 }
 
+.variablesAndDataTypesChallengeArticle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sizeMd);
+}
+
+.challengeComplete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* FOR DESKTOP SCREENS */
 
 @media screen and (min-width: 601px) {

@@ -99,7 +99,7 @@ let stringValue = "aaa";
 let nullValue = null;
 let booleanValue = true;
 let objectValue = { property: "value" };
-let arrayValue = ["a", "b", "c"];
+let arrayValue = ["[abc]"];
 console.log(Array.isArray(arrayValue));
 
 let sum = (a, b) => a + b;
