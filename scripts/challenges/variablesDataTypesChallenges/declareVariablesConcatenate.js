@@ -12,6 +12,7 @@ let dataTypeResultConcantenation = document.querySelector(
 
 addEventListener("submit", (event) => {
   event.preventDefault();
+  dataTypeResultConcantenation.textContent = "";
 
   let inputValues = document.querySelectorAll(".inputValues");
   let num1, num2;
@@ -36,7 +37,7 @@ defineValues = (inputValueData, inputValueId) => {
   if (cleanInputValueData === "null") {
     definedValue = null;
     console.log(typeof definedValue);
-  } else if (cleanInputValueData === "undefined") {
+  } else if (cleanInputValueData.includes("undefined")) {
     definedValue = undefined;
     console.log(typeof definedValue);
   } else if (!isNaN(Number(cleanInputValueData))) {
@@ -76,20 +77,23 @@ defineValues = (inputValueData, inputValueId) => {
     firstDataTypeResultDefined.textContent = `${typeof num1}`;
     console.log(num1);
   }
+
   if (inputValueId === "dataTypeSecond") {
     num2 = definedValue;
     secondDataTypeResultDefined.textContent = `${typeof num2}`;
-    console.log(num2);
+    console.log(typeof num2);
   }
 
   if (typeof num1 !== "undefined" && typeof num2 !== "undefined") {
     let sum = num1 + num2;
-    dataTypeResultConcantenation.textContent = `${sum}`;
     console.log(sum);
+    dataTypeResultConcantenation.textContent = `${sum}`;
   } else if (typeof num1 === "undefined" || typeof num2 === "undefined") {
     alert(
       "if you concantenate number, null, boolean with undefined, result will be NaN"
     );
+    sum = num1 + num2;
+    dataTypeResultConcantenation.textContent = `${sum}`;
   } else;
 };
 
